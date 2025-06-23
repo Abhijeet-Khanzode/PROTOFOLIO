@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PROTOFOLIO_ABHIJEET_KHANZODE</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <style>
+      /* Simple popup style */
+      #popupForm {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        z-index: 999;
+      }
+      #popupForm input {
+        display: block;
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+      }
+      #overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 998;
+      }
+    </style>
+
+
+  </head>
+  <body>
+   
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.5.0/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/pwqlrNfLUSPTrUiE/scene.splinecode"></spline-viewer>
+    <center><b>Use two finger for better view.</b></b.></center>
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> ABHI</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"  onclick="openPopup()"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center" id="about">
+                    <div class="about-text">
+                      <!-- <small class="small-text"><b>Use 2 Fingers..<span class="mobile-block"> For Better Exepereince..(^)</span></small></b> -->
+                        <small class="small-text"><b>Welcome to <span class="mobile-block">my portfolio website!</span></small></b>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey User, I'm Abhijeet.</span>
+                                <!-- <div class="animated-info">
+                                    <span class="animated-item">Abhijeet Khanzode</span>
+                                    <span class="animated-item">Computer_Engineer </span>
+                                    <span class="animated-item">Web Designer</span>
+                                </div> -->
+                        </h1>
+
+<p>I’m Abhijeet Khanzode, a passionate and driven Computer Science Engineering student with a specialization in Cybersecurity at G.H. Raisoni College Of Engineering Managment Nagpur. With a strong academic foundation built through SSC, HSC, and a Diploma in Computer Engineering from Government Polytechnic, Pune, I have always been deeply inclined towards technology, software development, and cybersecurity. My journey in tech started early, and since then, I’ve been committed to continuous learning and hands-on exploration. Whether it’s building desktop apps in Java, developing chat systems in PHP, or designing secure systems, I enjoy solving real-world problems using code.
+  <br>
+  🛠️ Technical Skills
+  Languages: Java, Python, JavaScript, C, C++, PHP, HTML/CSS, SQL
+  <br>
+  Tools/Frameworks: Ecclipse, Visual Studio Code, XAMPP, Oracle DB, VMware, Kali Linux
+  <br>
+  Concepts: OOP, Networking, System Security, Penetration Testing, Server-Client Models
+  </p>
+                        <!-- Downaload RESUME SCRIPT -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    emailjs.init("Mq5r5VjgzC-oCKcq5"); 
+  </script>
+
+
+
+  <!-- /DOWNLOAD RESUME SCRIPT  -->
+                        <div class="custom-btn-group mt-4">
+                          <a href="#" class="btn mr-lg-2 custom-btn"  onclick="openPopup()"><i class='uil uil-file-alt'></i> Download Resume</a>
+                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                        </div>
+                    </div>
+                </div>
+               
+               
+                <div id="overlay"></div>
+                <div id="popupForm">
+                  <h3>Enter Your Details</h3>
+                  <form id="resumeForm">
+                    <input type="text" name="user_name" placeholder="Your Name" required />
+                    <input type="tel" name="user_number" placeholder="Phone Number" required />
+                    <button type="submit">Download Resume.</button>
+                  </form>
+                </div>
+                <script>
+                  function openPopup() {
+                    document.getElementById('popupForm').style.display = 'block';
+                    document.getElementById('overlay').style.display = 'block';
+                  }
+                
+                  function closePopup() {
+                    document.getElementById('popupForm').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                  }
+                
+                  document.getElementById('resumeForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                
+                    emailjs.sendForm('ABHI-2025', 'template_kazuoex', this)
+                      .then(function () {
+                        alert("Your resume is downloading...");
+                        closePopup();
+                        // Trigger resume download
+                        window.location.href = 'RESUME/ABHIJEET_KHANZODE_RESUME.pdf'; // Replace with your resume path
+                      }, function (error) {
+                        alert("Error... Please try again. or contact Abhijeet Khanzode. 9028325149");
+                        console.log(error);
+                      });
+                  });
+                </script>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                  <div class="about-image svg">
+                    <img src="images\undraw\undraw_software_engineer_lvl5.svg">
+
+                  </div>
+              </div>
+              
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- <script type="module" src="@splinetool/viewer@1.5.0/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/w3tjeNsfcfx00vZ3/scene.splinecode"></spline-viewer> -->
+
+<!-- <spline-viewer url="https://prod.spline.design/w3tjeNsfcfx00vZ3/scene.splinecode"></spline-viewer> -->
+
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+        <div class="container">
+                
+                <div class="row">
+                  <div class="col-lg-11 text-center mx-auto col-12">
+
+                      <div class="col-lg-8 mx-auto">
+                        <h2>PROJECTS I have Learned and Designed during my college period..</h2>
+                      </div>
+
+                      <div class="owl-carousel owl-theme">
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/1.jpeg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/2.jpeg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/3.jpeg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/4.jpeg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/5.jpeg" class="img-fluid" alt="project image">
+                          </div>
+
+                        </div><div class="item">
+                          <div class="project-info">
+                            <img src="images/project/6.jpeg" class="img-fluid" alt="project image">
+                          </div>
+
+                       
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2019</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>High School</span><small>SSC</small></h3>
+                                  <p>From Swami Pendase Guruji Vidhyalay, Dhanki - with 73.40 %.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Junior College </span><small>HSC</small></h3>
+                                <p>From Gopikabaie Sitaram Gawande College Umarkhed - with 92.83 %. </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Diploma </h3>
+                                <p>From Government Polytechnic, Pune. Pune Maharashtra -  with 76.40 %. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2026</span>
+                            </div>
+                            <div class="timeline-info">
+                              <h3><span> B.Tech </h3>
+                                <h3><span>CSE(Cyber Security.)</h3>
+                                <p>From G.H. Raisoni College Of Engineering Managment Nagpur.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Technologies </h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>1</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>C</span><small>Design</small></h3>
+                                  <!-- <p>Learned and created a various projects in C as basic language.</p> -->
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>C++</span><small></small></h3>
+                                <p><a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apps"></p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>3</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Python</span><small></small></h3>
+                              <p><a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apps"></p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>4</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Java</span><small></small></h3>
+                            <p><a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apps"></p>
+                        </div>
+                    </div>
+                    <div class="timeline-wrapper">
+                      <div class="timeline-yr">
+                          <span>5</span>
+                      </div>
+                      <div class="timeline-info">
+                          <h3><span>PHP</span><small></small></h3>
+                          <p><a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apps"></p>
+                      </div>
+                  </div>
+                  <div class="timeline-wrapper">
+                    <div class="timeline-yr">
+                        <span>6</span>
+                    </div>
+                    <div class="timeline-info">
+                        <h3><span>SQL</span><small></small></h3>
+                        <p><a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apps"></p>
+                    </div>
+                </div>
+                <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>7</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>HTML,JavaScript etc.</span><small></small></h3>
+                                <p><a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apps"></p>
+                            </div>
+                        </div>
+                        <!-- <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2013</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Artwork Design</span><small>New Art School</small></h3>
+                                <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2631.3657760603614!2d78.99907710825592!3d21.124096539986212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4eab12bd10cef%3A0xf6e67c2f0a066c27!2sG%20H%20RAISONI%20COLLEGE%20OF%20ENGINEERING%20AND%20MANAGEMENT%20(GHRCEMN)!5e1!3m2!1sen!2sin!4v1717598099144!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say.. Hello..!</h3>
+                  <p class="footer-text mb-0">+91 9028325149</p>
+                  <p><a href="mailto:dev.abhi.khanzode@gmail.com">dev.abhi.khanzode@gmail.com</a></p>
+                </div>
+
+                <ul class="social-links">
+                     <li><a href="https://github.com/Abhijeet-Khanzode" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Git-Hub"></a></li>
+                     <li><a href="https://www.instagram.com/abhijeet_khanzode" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                     <!-- <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li> -->
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="hidden" name="access_key" value="aa00e76e-8334-4e54-b0df-f1c43efd8182">
+                    <input type="text" class="form-control" name="name" required placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" required placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" required placeholder="Message"></textarea>
+                  </div>
+                  <div class="h-captcha" data-captcha="true" aria-required="true" ></div>
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    <!-- <button type="submit">Submit</button> -->
+                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                  </div>
+                </div>
+              </form>
+              <script src="https://web3forms.com/client/script.js" async defer></script>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2024 ABHI . All rights reserved</p>
+                        <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.linkedin.com/in/abhijeet-khanzode-a18400231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">ABHIJEET KHANZODE.</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>
